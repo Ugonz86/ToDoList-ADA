@@ -2,18 +2,17 @@
   Layout = "_Layout";
 }
 @using System.Security.Claims
-
-<h1>Welcome to my To Do List!</h1>
+<h1>Welcome to the To Do List!</h1>
 <br>
 
 @if (User.Identity.IsAuthenticated)
 {
-  <h3>Hello @User.Identity.Name!</h3>
-  <br>
+
   <h4>@Html.ActionLink("See all categories", "Index", "Categories")</h4>
   <h4>@Html.ActionLink("See all items", "Index", "Items")</h4>
 }
 else
 {
   <h4>@Html.ActionLink("Create an account", "Index", "Account")</h4>
+  <h4>@Html.ActionLink("Log in", "Login", "Account")</h4>
 }

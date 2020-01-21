@@ -1,23 +1,21 @@
 @{
   Layout = "_Layout";
 }
-
 @using System.Security.Claims
 
-<h2>Authentication with Identity</h2>
-<hr />
+<h1>Authentication with Identity</h1>
+<br>
 @if (User.Identity.IsAuthenticated)
 {
-    <p>Hello @User.Identity.Name!</p>
-    @using (Html.BeginForm("LogOff", "Account"))
-    {
-        <input type="submit" class="btn btn-default" value="Log out" />
-    }
+    <h3>Hello @User.Identity.Name!</h3>
+    <br>
 }
 else
 {
-    <p>@Html.ActionLink("Register", "Register")</p>
-    <p>@Html.ActionLink("Log in", "Login")</p>
+    <h4>@Html.ActionLink("Register", "Register")</h4>
+    <h4>@Html.ActionLink("Log in", "Login")</h4>
 }
-<br>
- <p>@Html.ActionLink("Home", "Index", "Home")</p>
+@if (User.Identity.IsAuthenticated)
+{
+    <h4>@Html.ActionLink("To Do List Overview", "Index", "Home")</h4>
+}

@@ -1,0 +1,11 @@
+<div class="header1">
+    @if (User.Identity.IsAuthenticated)
+    {
+        @User.Identity.Name
+         @using (Html.BeginForm("LogOff", "Account"))
+     {
+        <input type="submit" value="Log out" />
+     }
+    }
+     
+</div>
