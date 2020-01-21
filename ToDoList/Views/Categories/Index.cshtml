@@ -14,11 +14,9 @@
 
 @foreach (Category category in Model)
 {
-  <li>@Html.ActionLink($"{category.Name}", "Details", new { id = category.CategoryId })</li>
+  <h3>@Html.ActionLink($"{category.Name}", "Details", new { id = category.CategoryId })</h3>
 }
 <br>
-<p>@Html.ActionLink("Delete All Categories", "DeleteAll")</p>
-
-<p>@Html.ActionLink("Add new category", "Create")</p>
-
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<h4>@Html.ActionLink("Add new category", "Create")</h4>
+<h4>@Html.ActionLink("Delete All Categories", "DeleteAll")</h4>
+<h4>@Html.ActionLink("Home", "Index", "Home")</h4>

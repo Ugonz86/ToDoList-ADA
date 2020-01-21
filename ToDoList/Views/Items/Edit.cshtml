@@ -4,9 +4,9 @@
 
 @model ToDoList.Models.Item
 
-<h2>Edit</h2>
+<h1>Edit</h1>
 
-<h4>Edit this task: @Html.DisplayFor(model => model.Description)</h4>
+<h3>Edit this task: @Html.DisplayFor(model => model.Description)</h3>
 
 @using (Html.BeginForm())
 {
@@ -15,10 +15,10 @@
     @Html.LabelFor(model => model.Description)
     @Html.EditorFor(model => model.Description)
 
-    @Html.Label("Select category")
+    @Html.Label(" Select category ")
     @Html.DropDownList("CategoryId")
 
     <input type="submit" value="Save" />
 }
-
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<br>
+<h4>@Html.ActionLink("Back to list", "Index")</h4>

@@ -6,21 +6,21 @@
 @model IEnumerable<ToDoList.Models.Item>
 
 <h1>Items for @User.Identity.Name</h1>
-
+<br>
 @if (Model.Any())
 {
-  <ul>
+  
     @foreach (Item item in Model)
     {
-      <li>@Html.ActionLink($"{item.Description}", "Details", new { id = item.ItemId })</li>
+      <h3>@Html.ActionLink($"{item.Description}", "Details", new { id = item.ItemId })</h3>
     }
-  </ul>
+  
 } 
 else
 {
   <h3>No items have been added yet!</h3>
 }
+<br>
+<h4>@Html.ActionLink("Add new item", "Create")</h4>
 
-<p>@Html.ActionLink("Add new item", "Create")</p>
-
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<h4>@Html.ActionLink("Home", "Index", "Home")</h4>

@@ -4,9 +4,9 @@
 
 @model ToDoList.Models.Item
 
-<h2>Add a category</h2>
+<h1>Add a category</h1>
 
-<h4>Add a category to this task: @Html.DisplayFor(model => model.Description)</h4>
+<h3>Add a category to this task: @Html.DisplayFor(model => model.Description)</h3>
 
 @using (Html.BeginForm())
 {
@@ -18,4 +18,4 @@
     <input type="submit" value="Save" />
 }
 
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<h4>@Html.ActionLink("Back to list", "Index")</h4>

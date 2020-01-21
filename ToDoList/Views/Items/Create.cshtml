@@ -4,8 +4,8 @@
 
 @model ToDoList.Models.Item
 
-<h4>Add a new task</h4>
-
+<h1>Add a new task</h1>
+<br>
 @using (Html.BeginForm())
 {
     @Html.LabelFor(model => model.Description)
@@ -16,4 +16,5 @@
 
     <input type="submit" value="Add new item" class="btn btn-default" />
 }
-<p>@Html.ActionLink("Show all items", "Index")</p>
+<br>
+<h4>@Html.ActionLink("Show all items", "Index")</h4>
