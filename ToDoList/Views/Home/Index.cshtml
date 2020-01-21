@@ -1,8 +1,18 @@
-@*
 @{
   Layout = "_Layout";
 }
+@using System.Security.Claims
+
 <h1>Welcome to the To Do List!</h1>
-<p>@Html.ActionLink("See all categories", "Index", "Categories")</p>
-<p>@Html.ActionLink("See all items", "Index", "Items")</p>
-*@
+
+@if (User.Identity.IsAuthenticated)
+{
+  <p>Hello @User.Identity.Name!</p>
+  <br>
+  <p>@Html.ActionLink("See all categories", "Index", "Categories")</p>
+  <p>@Html.ActionLink("See all items", "Index", "Items")</p>
+}
+else
+{
+  <p>@Html.ActionLink("Create an account", "Index", "Account")</p>
+}
