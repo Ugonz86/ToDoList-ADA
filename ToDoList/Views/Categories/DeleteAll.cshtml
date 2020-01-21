@@ -1,21 +1,19 @@
-@*   
+
 @{
   Layout = "_Layout";
 }
 
-@model ToDoList.Models.Category
+@model List<ToDoList.Models.Category>;
 
-<h2>Edit</h2>
-
-<h4>Edit this category: @Html.DisplayFor(model => model.Name)</h4>
+<h2>Are you sure you want to delete all categories?</h2>
+<br>
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.CategoryId)
-
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
-
-    <input type="submit" value="Save" />
+    <input type="submit" value="DeleteAll" />
 }
-<p>@Html.ActionLink("Back to categories", "Index")</p> *@
+
+<br>
+<br>
+@Html.ActionLink("Back to categories", "Index")
+

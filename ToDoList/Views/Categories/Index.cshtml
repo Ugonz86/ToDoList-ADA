@@ -17,6 +17,8 @@
   <li>@Html.ActionLink($"{category.Name}", "Details", new { id = category.CategoryId })</li>
 }
 <br>
+<p>@Html.ActionLink("Delete All Categories", "DeleteAll")</p>
+
 <p>@Html.ActionLink("Add new category", "Create")</p>
 
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
