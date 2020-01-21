@@ -1,6 +1,6 @@
-# APP NAME
+# TO DO LIST 
 
-#### _DESCRIPTION - BUILD DATE_
+####  C# and .NET Advanced Databases and Authentication - _01/21/2020_
 
 #### _By **Uriel Gonzalez**_
 
@@ -23,6 +23,21 @@ DETAILED DESCRIPTION
     ```
     $ dotnet run
     ```
+## Database Setup
+
+```sh
+1. mysql start
+2. Access MySql by executing the command: `mysql -uroot -pepicodus`
+3. CREATE DATABASE `to_do_list`
+4. USE `to_do_list`
+5. CREATE TABLE `Categories` (`CategoryId` int(11) NOT NULL AUTO_INCREMENT, `Name` varchar(255) DEFAULT NULL, PRIMARY KEY (`CategoryId`))
+6. CREATE TABLE `Items` (`ItemId` int(11) NOT NULL AUTO_INCREMENT, `Description` varchar(255), `UserId` int(11), PRIMARY KEY (`ItemId`))
+7. CREATE TABLE `CategoryItem` (`CategoryItemId` int(11) NOT NULL AUTO_INCREMENT, `ItemId` int(11) NOT NULL, `CategoryId` int(11) NOT NULL, PRIMARY KEY (`CategoryItemId`))
+8. Run program with dotnet run (or $ dotnet watch run).
+
+```
+OR
+* > dotnet restore, dotnet ef migrations add addIdentity, dotnet ef migrations add Authorization, dotnet ef database update
 
 ## Known Bugs
 * No known bugs at this time.
