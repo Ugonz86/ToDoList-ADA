@@ -44,7 +44,7 @@ input {
   border: none;
   border-radius: 5px;
   width: 100px;
-  height: 50px;
+  height: 30px;
 }
 input:hover {
   background-color:#7be880;;

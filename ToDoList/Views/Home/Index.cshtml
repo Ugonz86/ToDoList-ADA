@@ -8,11 +8,11 @@
 @if (User.Identity.IsAuthenticated)
 {
 
-  <h4>@Html.ActionLink("See all categories", "Index", "Categories")</h4>
-  <h4>@Html.ActionLink("See all items", "Index", "Items")</h4>
+  <h3>@Html.ActionLink("See all categories", "Index", "Categories")</h3>
+  <h3>@Html.ActionLink("See all items", "Index", "Items")</h3>
 }
 else
 {
-  <h4>@Html.ActionLink("Create an account", "Index", "Account")</h4>
-  <h4>@Html.ActionLink("Log in", "Login", "Account")</h4>
+  <h3>@Html.ActionLink("Create an account", "Index", "Account")</h3>
+  <h3>@Html.ActionLink("Log in", "Login", "Account")</h3>
 }
